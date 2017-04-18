@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Software as a Service web application.
 
-Things you may want to cover:
+Ruby = 2.4.1
 
-* Ruby version
+Rails = 5.1.0.rc1
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Started: 04/18/2017
