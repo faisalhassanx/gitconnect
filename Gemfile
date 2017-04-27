@@ -7,6 +7,7 @@ gem 'normalize-rails'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'sass-rails', github: "rails/sass-rails"
 gem 'uglifier', '>= 1.3.0'
+gem 'jquery-rails'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
