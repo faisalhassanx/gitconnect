@@ -3,6 +3,7 @@ ruby '2.4.1'
 
 gem 'rails', '~> 5.1.0.rc1'
 gem 'puma', '~> 3.7'
+gem 'normalize-rails'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'sass-rails', github: "rails/sass-rails"
 gem 'uglifier', '>= 1.3.0'
