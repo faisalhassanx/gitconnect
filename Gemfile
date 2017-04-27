@@ -6,6 +6,7 @@ gem 'puma', '~> 3.7'
 gem 'normalize-rails'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'sass-rails', github: "rails/sass-rails"
+gem 'font-awesome-sass', '~> 4.7.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'coffee-rails', '~> 4.2'

@@ -12,42 +12,56 @@ footer {
   bottom:0;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
-$font-family-base: 'Ubuntu', sans-serif;
+$font-family-base: 'Montserrat', sans-serif;
 
-$body-bg: #d3e0f7;
-$font-size-base: 18px;
 $navbar-default-bg: #181842;
-$navbar-default-link-color: white;
-$navbar-default-brand-hover-color: #6d819c;
-$navbar-default-toggle-icon-bar-bg: white;
-$navbar-default-toggle-hover-bg: #6d819c;
-$navbar-default-link-hover-color: #6d819c;
+$navbar-default-link-color: #ffffff;
+$navbar-default-brand-hover-color: #d3e0f7;
+$navbar-default-toggle-icon-bar-bg: #ffffff;
+$navbar-default-toggle-hover-bg: #d3e0f7;
+$navbar-default-link-hover-color: #d3e0f7;
+$dropdown-link-color: #181842;
+$dropdown-link-hover-color: #ffffff;
+$dropdown-link-hover-bg: #181842;
+$component-active-bg: #181842;
+$jumbotron-bg: #d3e0f7;
+$well-bg: #ebf1fb;
+$well-border: #ffffff;
+$btn-default-bg: #ffffff;
+$btn-default-color: #181842;
 $btn-primary-bg: #181842;
 $btn-primary-color: #f4f5f9;
-$btn-info-bg: #d3e0f7;
-$btn-info-color: #181842;
-$btn-default-bg: #f4f5f9;
-$btn-default-color: #181842;
-$jumbotron-bg: #f4f5f9;
-$alert-info-bg: white;
-$alert-info-border: #181842;
-$alert-info-text: #181842;
-$btn-danger-bg: #c72e45;
-$btn-danger-color: #F8FAFF;
-$btn-success-bg: #004e66;
-$btn-success-color: #F8FAFF;
-$btn-info-border: #181842;
+$btn-info-bg: #005f6b;
+$btn-info-color: #ffffff;
+$btn-success-bg: #08182b;
+$btn-success-color: #ffffff;
+$btn-warning-bg: #a6172d;
+$btn-warning-color: #ffffff;
 
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 body {
-	color: #181842;
-  padding-top: 40px;
+  padding-top: 100px;
+  background-color: #ffffff;
+  color: #181842;
+}
+
+.navbar-default {
+  padding: 0 20px;
+}
+.navbar-default .navbar-nav > li > a {
+  font-size: 1.2em;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  background-color: #181842;
+  color: #d3e0f7;
 }
 
 #logo {
@@ -60,6 +74,9 @@ h1, h2, h3 {
   font-weight: normal;
   /*font-family: 'Asar', serif;*/
 }
+
+
+//  Footer credits pill
 
 footer a:hover {
   color: #a6172d;
