@@ -50,10 +50,43 @@ body {
   padding-top: 40px;
 }
 
+#logo {
+  font-size: 1.8em;
+  font-weight: 600;
+}
 
 h1, h2, h3 {
   font-family: 'Ubuntu', sans-serif;
   font-weight: normal;
   /*font-family: 'Asar', serif;*/
+}
 
+footer a:hover {
+  color: #a6172d;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+.nav-pills {
+  background-color: #181842;
+}
+
+.nav-pills > li > a:hover {
+  border-radius: 0;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+  background-color: #ffffff;
+  border-radius: 0;
+}
+
+a#by-tab {
+  color: #ffffff;
+}
+
+a#by-tab:hover {
+  color: #181842;
 }
