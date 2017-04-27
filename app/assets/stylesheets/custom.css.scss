@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,body,#page, header { 
+  height:100%;
+}
+/* FOOTER HEIGHT */
+footer { 
+  position:absolute;
+  bottom:0;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
+
+$font-family-base: 'Open Sans', sans-serif;
+
+
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+
+
+body {
+  
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  /*font-family: 'Asar', serif;*/
+
+}

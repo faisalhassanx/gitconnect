@@ -13,14 +13,3 @@
  *= require_tree .
  *= require_self
  */
-
-body {
-  
-}
-
-h1, h2, h3 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: normal;
-  /*font-family: 'Asar', serif;*/
-
-}
