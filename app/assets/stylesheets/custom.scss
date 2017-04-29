@@ -66,7 +66,9 @@ h1, h2, h3 {
   font-size: 1.3em;
 }
 
-.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+.navbar-default .navbar-nav > a, 
+.navbar-default .navbar-nav > a:hover, 
+.navbar-default .navbar-nav > a:focus {
   background-color: #181842;
   color: #d3e0f7;
 }
@@ -74,6 +76,21 @@ h1, h2, h3 {
 #logo {
   font-size: 1.8em;
   font-weight: 600;
+}
+
+.navbar-brand {
+  padding: 5px 15px;
+}
+
+#logo:hover {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.navbar-brand > img {
+  display: inline;
+  height: 45px;
+  width: 45px;
 }
 
 //Jumbotron
