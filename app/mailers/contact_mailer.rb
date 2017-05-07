@@ -3,7 +3,7 @@ class ContactMailer < ActionMailer::Base
   def contact_email(name, email, body)
     @name = name
     @email = email
-    @body = body
+    @message = message
     mail(from: email, subject: 'Contact Form Message from GitConnect')
   end
 end
