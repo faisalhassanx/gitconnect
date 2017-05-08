@@ -124,8 +124,6 @@ p {
   margin-bottom: 30px;
 }
 
-// Contact form
-
 
 //  Footer credits pill
 
@@ -149,6 +147,10 @@ footer ul {
 .nav > li > a:hover, .nav > li > a:focus {
   background-color: #ffffff;
   border-radius: 0;
+}
+
+.nav > li > a#by-tab {
+  padding: 5px 10px;
 }
 
 a#by-tab {
