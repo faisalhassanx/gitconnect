@@ -26,7 +26,7 @@ $dropdown-link-hover-color: #ffffff;
 $dropdown-link-hover-bg: #181842;
 $component-active-bg: #181842;
 $jumbotron-bg: #d3e0f7;
-$well-bg: #ebf1fb;
+$well-bg: #d3e0f7;
 $well-border: #ffffff;
 $btn-default-bg: #ffffff;
 $btn-default-color: #181842;
@@ -34,8 +34,8 @@ $btn-primary-bg: #181842;
 $btn-primary-color: #f4f5f9;
 $btn-info-bg: #005f6b;
 $btn-info-color: #ffffff;
-$btn-success-bg: #08182b;
-$btn-success-color: #ffffff;
+$btn-success-bg: #004e66;
+$btn-success-color: #F8FAFF;
 $btn-warning-bg: #a6172d;
 $btn-warning-color: #ffffff;
 
@@ -97,10 +97,10 @@ h1, h2, h3 {
 
 .jumbotron {
 	max-width: 2400px;
-	min-height: 250px;
-	margin: 30px auto;
-	padding-top: 10px;
-	padding-bottom: 30px;
+	min-height: 240px;
+	margin: 20px auto;
+	padding-top: 15px;
+	padding-bottom: 15px;
   background-size: cover;
 }
 
@@ -150,7 +150,6 @@ footer ul {
 
 a#by-tab {
   color: #ffffff;
-  letter-spacing: 2px;
 }
 
 a#by-tab:hover {
@@ -161,4 +160,17 @@ a#by-tab:hover {
 
 .alert-notice {
   display: none;
+}
+
+// Plans
+.home-signup-links {
+  margin-top: 30px;
+}
+
+.basic, .pro {
+  min-width: 570px;
+}
+
+.basic {
+  margin-left: -15px;
 }

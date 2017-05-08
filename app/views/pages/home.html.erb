@@ -4,15 +4,28 @@
     Connect and network with your fellow <a href="https://www.freecodecamp.com" 
     target="_blank">freeCodeCamp</a> students 
   </h3>
-  <% if user_signed_in? %>
-  
-  <% else %>
-    <div class="row">
-      <div class="col-md-4 col-md-offset-4" id="signup">
+</div>
+
+<div class="container home-signup-links">
+  <div class="row">
+    <div class="col-md-6 text-center">
+      <div class="well basic">
+        <h2>Basic Membership</h2>
+        <h4>Free</h4>
+        <h4>Get basic access to the community</h4>
+        <%= link_to 'Sign Up', new_user_registration_path, 
+                           class: "btn btn-success btn-lg btn-block" %>
+      </div>
+    </div>
+
+    <div class="col-md-6 text-center">
+      <div class="well pro">
+        <h2>Pro Membership</h2>
+        <h4>$4.99/month</h4>
+        <h4>Get complete access to the community</h4>
         <%= link_to 'Sign Up', new_user_registration_path, 
                            class: "btn btn-primary btn-lg btn-block" %>
       </div>
     </div>
-  <% end %>
-  
+  </div>
 </div>
