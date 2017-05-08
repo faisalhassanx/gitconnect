@@ -1,9 +1,9 @@
 class ContactMailer < ActionMailer::Base
   default to: 'faisal.hassanx@gmail.com'
-  def contact_email(name, email, message)
+  def contact_email(name, email, body)
     @name = name
     @email = email
-    @message = message
-    mail(from: email, subject: 'Contact Form Message from GitConnect', message)
+    @body = body
+    mail(from: email, subject: 'Contact Form Message from GitConnect')
   end
 end
