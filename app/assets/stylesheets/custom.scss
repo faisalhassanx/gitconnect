@@ -62,7 +62,7 @@ p {
 // Navbar
 
 .navbar-default {
-  padding: 10px 20px;
+  padding: 5px 20px;
 }
 .navbar-default .navbar-nav > li > a {
   font-size: 1.5em;
@@ -100,8 +100,8 @@ p {
 
 .jumbotron {
 	max-width: 2400px;
-	min-height: 240px;
-	margin: 20px auto;
+	min-height: 220px;
+	margin: 10px auto;
 	padding-top: 15px;
 	padding-bottom: 15px;
   background-size: cover;
@@ -167,7 +167,8 @@ a#by-tab:hover {
 
 // Plans
 .home-signup-links {
-  margin-top: 30px;
+  margin-top: 15px;
+  margin-bottom: 5px;
 }
 
 .pro {
