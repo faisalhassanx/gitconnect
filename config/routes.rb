@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  devise_for :users
   resources :contacts, :only => [:create]
   get 'contact' => 'contacts#new', as: 'new_contact'
   
