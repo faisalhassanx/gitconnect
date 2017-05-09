@@ -1,9 +1,13 @@
 <div class="container">
   <div class="row">
-    <h2 class="text-center">Sign Up</h2>
+    <% if params[:plan] == '2' %>
+      <h2 class="text-center">Pro Account Registration</h2>
+    <% else %>
+      <h2 class="text-center">Basic Account Registration</h2>
+    <% end %>
     <div class="col-md-6 col-md-offset-3">
       <div class="well">
-
+        
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
           <%= devise_error_messages! %>
         
