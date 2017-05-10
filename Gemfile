@@ -14,6 +14,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'hirb', '~> 0.7.3'
 gem 'devise', '~> 4.2'
+gem 'stripe', '1.48.0'
 # gem 'redis', '~> 3.0'
 # gem 'bcrypt','~> 3.1.7'
 
