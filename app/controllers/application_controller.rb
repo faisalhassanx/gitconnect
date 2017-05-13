@@ -4,7 +4,8 @@ class ApplicationController < ActionController::Base
   # Whitelist the following form fields from devise so they can be processed
 
   before_action :configure_permitted_parameters, if: :devise_controller?
-protected
+  
+  protected
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:stripe_card_token, :email, :password, :password_confirmation) }
   end

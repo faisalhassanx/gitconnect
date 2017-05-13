@@ -12,7 +12,12 @@ class User < ApplicationRecord
   # Store customer id as customer token and save user
   def save_with_subscription
     if valid?
-      customer = Stripe::Customer.create(description: email, plan: plan_id, source: stripe_card_token)
+      customer = Stripe::Customer.create(
+        :source => stripe_card_token,
+        :email => email,
+        :plan => plan_id
+      )
+
       self.stripe_customer_token = customer.id
       save!
     end
