@@ -2,7 +2,7 @@
 // Document ready
 $(document).on('turbolinks:load', function(){
   var theForm = $('#pro_form');
-  var submitBtn = $('form-submit-btn');
+  var submitBtn = $('#form-signup-btn');
   // Set Stripe public key
   Stripe.setPublishableKey( $('meta[name="stripe-key"]').attr('content') );
   
@@ -39,7 +39,7 @@ $(document).on('turbolinks:load', function(){
     } else {
         
     // Send the card info to Stripe.
-    Stripe.createToken({
+    Stripe.card.createToken({
         number: ccNum,
         cvc: cvcNum,
         exp_month: expMonth,

@@ -9,10 +9,10 @@ class User < ApplicationRecord
   # If Pro user passes form validations
   # then set up subscription with Stripe.
   # Stripe responds with customer data
-  # Store customer.id as customer token and save user
+  # Store customer id as customer token and save user
   def save_with_subscription
     if valid?
-      customer = Stripe::Customer.create(description: email, plan: plan_id, card: stripe_card_token)
+      customer = Stripe::Customer.create(description: email, plan: plan_id, source: stripe_card_token)
       self.stripe_customer_token = customer.id
       save!
     end
