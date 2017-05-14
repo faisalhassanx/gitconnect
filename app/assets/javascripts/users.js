@@ -1,17 +1,18 @@
 /* global $, Stripe */
-// Document ready
-$(document).on('turbolinks:load', function(){
+//Document ready.
+$(document).ready(function(){
   var theForm = $('#pro_form');
-  var submitBtn = $('#form-signup-btn');
-  // Set Stripe public key
+  //Set Stripe public key.
+
   Stripe.setPublishableKey( $('meta[name="stripe-key"]').attr('content') );
-  
-  // When user clicks form submit btm
-  submitBtn.click(function(event){
-    // prevent default submission behavior
-    event.preventDefault;
-    submitBtn.val("Processing").prop('disabled', true);
-    // Collect the credit card fields.
+
+  //When user clicks form submit btn,
+  $("#form-signup-btn").click(function(event){
+    setTimeout(alert("4 seconds"),4000);
+    //prevent default submission behavior.
+    event.preventDefault();
+    $('input[type=submit]').prop('disabled', true);
+    //Collect the credit card fields.
     var ccNum = $('#card_number').val(),
         cvcNum = $('#card_code').val(),
         expMonth = $('#card_month').val(),
@@ -35,11 +36,12 @@ $(document).on('turbolinks:load', function(){
     }
     if (error) {
       //If there are card errors, don't send to Stripe.
-      submitBtn.prop('disabled', false).val("Sign Up");
+      $("#form-signup-btn").prop('disabled', false).val("Sign Up");
     } else {
-        
-    // Send the card info to Stripe.
-    Stripe.card.createToken({
+      //Send the card info to Stripe.
+      alert('test');
+
+      Stripe.createToken({
         number: ccNum,
         cvc: cvcNum,
         exp_month: expMonth,
@@ -48,7 +50,7 @@ $(document).on('turbolinks:load', function(){
     }
     return false;
   });
-
+  //Stripe will return a card token.
   function stripeResponseHandler(status, response) {
     //Get the token from the response.
     var token = response.id;
