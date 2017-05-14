@@ -6,26 +6,30 @@
   </h3>
 </div>
 
-<div class="container home-signup-links">
-  <div class="row">
-    <div class="col-md-6 text-center">
-      <div class="well basic">
-        <h2>Basic Membership</h2>
-        <h3>Free</h3>
-        <h3>Get basic access to the community</h3>
-        <%= link_to 'Sign Up', new_user_registration_path(plan: @basic_plan.id), 
-                           class: "btn btn-success btn-lg btn-block signup" %>
-      </div>
-    </div>
+<% if user_signed_in? %>
 
-    <div class="col-md-6 text-center">
-      <div class="well pro">
-        <h2>Pro Membership</h2>
-        <h3>$4.99/month</h3>
-        <h3>Get complete access to the community</h3>
-        <%= link_to 'Sign Up', new_user_registration_path(plan: @pro_plan.id),
-                           class: "btn btn-primary btn-lg btn-block signup" %>
+<% else %>
+  <div class="container home-signup-links">
+    <div class="row">
+      <div class="col-md-6 text-center">
+        <div class="well basic">
+          <h2>Basic Membership</h2>
+          <h3>Free</h3>
+          <h3>Get basic access to the community</h3>
+          <%= link_to 'Sign Up', new_user_registration_path(plan: @basic_plan.id), 
+                             class: "btn btn-success btn-lg btn-block signup" %>
+        </div>
+      </div>
+  
+      <div class="col-md-6 text-center">
+        <div class="well pro">
+          <h2>Pro Membership</h2>
+          <h3>$4.99/month</h3>
+          <h3>Get complete access to the community</h3>
+          <%= link_to 'Sign Up', new_user_registration_path(plan: @pro_plan.id),
+                             class: "btn btn-primary btn-lg btn-block signup" %>
+        </div>
       </div>
     </div>
   </div>
-</div>
+<% end %>
