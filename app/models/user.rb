@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   belongs_to :plan
+  has_one :profile
   
   # If Pro user passes form validations
   # then set up subscription with Stripe.
