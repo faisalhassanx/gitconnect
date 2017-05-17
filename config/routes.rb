@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
   
+  
+  devise_for :users, controllers: { registrations: 'users/registrations' }
   resources :users do
     resource :profile
   end
   
-  devise_for :users, controllers: { registrations: 'users/registrations' }
   resources :contacts, :only => [:create]
   
   get 'contact' => 'contacts#new', as: 'new_contact'
