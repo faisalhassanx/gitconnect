@@ -16,6 +16,8 @@ gem 'hirb', '~> 0.7.3'
 gem 'devise', '~> 4.2'
 gem 'stripe', '1.48.0'
 gem 'figaro', '1.1.1'
+gem "paperclip", "~> 5.0.0"
+
 # gem 'redis', '~> 3.0'
 # gem 'bcrypt','~> 3.1.7'
 
