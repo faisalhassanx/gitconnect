@@ -12,6 +12,7 @@ class ProfilesController < ApplicationController
       flash[:success] = "Profile Updated!"
       redirect_to user_path(params[:user_id])
     else
+      flash[:danger] = "Please try again!"
       render action: :new
     end
   end
@@ -19,7 +20,8 @@ class ProfilesController < ApplicationController
   private
   
   def profile_params
-    params.require(:profile).permit(:first_name, :last_name, :job_title, :company, :phone_number, :contact_email, :about)
+    params.require(:profile).permit(:first_name, :last_name, :job_title, :company, 
+                                    :phone_number, :contact_email, :about, :avatar)
   end
   
 end
