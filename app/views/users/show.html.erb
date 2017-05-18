@@ -1,23 +1,25 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-3 text-center">
-      <%= image_tag @user.profile.avatar.url(:thumb) %>
-    </div>
-    <div class="col-md-6 col-md-offset-1">
-      <h2><%= @user.profile.first_name %> <%= @user.profile.last_name %></h2>
-      <h4><%= @user.profile.job_title %> at <%= @user.profile.company %></h4>
-      <div class="well">
-        <h3>About</h3>
-        <%= @user.profile.about %>
+    <div class="col-md-10 col-md-offset-2">
+      <div class="col-md-3 text-center">
+      <%= image_tag @user.profile.avatar.url, class: "avatar-img" %>
       </div>
-      <% if current_user.plan_id == 2 %>
-      <div class="well">
-        <h3>Contact</h3>
-        <%= @user.profile.phone_number %>
-        <%= @user.profile.contact_email %>
+      <div class="col-md-6 col-md-offset-1">
+        <h2 class="text-center"><%= @user.profile.first_name %> <%= @user.profile.last_name %></h2>
+        <h4 class="text-center"><%= @user.profile.job_title %> at <%= @user.profile.company %></h4>
+        <div>
+          <h3>About</h3>
+          <%= @user.profile.about %>
+        </div>
+        <% if current_user.plan_id == 2 %>
+        <div>
+          <h3>Get in touch</h3>
+          
+          <strong>Phone: </strong><a href="tel:<%= @user.profile.phone_number %>"><%= @user.profile.phone_number %></a><br />
+          <strong>Email: </strong><a href="mailto:<%= @user.profile.contact_email %>?Subject=Hello from GitConnect"><%= @user.profile.contact_email %></a>
+        </div>
+        <% end %>
       </div>
-      <% end %>
-      
     </div>
   </div>
 </div>
