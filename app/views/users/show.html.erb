@@ -14,9 +14,10 @@
         <% if current_user.plan_id == 2 %>
         <div>
           <h3>Get in touch</h3>
-          
-          <strong>Phone: </strong><a href="tel:<%= @user.profile.phone_number %>"><%= @user.profile.phone_number %></a><br />
-          <strong>Email: </strong><a href="mailto:<%= @user.profile.contact_email %>?Subject=Hello from GitConnect"><%= @user.profile.contact_email %></a>
+          <strong>Phone: </strong><a href="tel:<%= @user.profile.phone_number %>">
+                                  <%= @user.profile.phone_number %></a><br />
+          <strong>Email: </strong><a href="mailto:<%= @user.profile.contact_email %>?Subject=Hello from GitConnect">
+                                                  <%= @user.profile.contact_email %></a>
         </div>
         <% end %>
       </div>
