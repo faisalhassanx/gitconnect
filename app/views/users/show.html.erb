@@ -1,8 +1,9 @@
 <div class="container">
   <div class="row">
     <div class="col-md-10 col-md-offset-2">
+    <br />
       <div class="col-md-3 text-center">
-      <%= image_tag @user.profile.avatar.url, class: "avatar-img" %>
+        <%= image_tag @user.profile.avatar.url, class: "avatar-img" %>
       </div>
       <div class="col-md-6 col-md-offset-1">
         <h2 class="text-center"><%= @user.profile.first_name %> <%= @user.profile.last_name %></h2>
