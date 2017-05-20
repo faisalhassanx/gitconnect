@@ -10,7 +10,7 @@ class Profile < ActiveRecord::Base
                       uniqueness: { case_sensitive: false }
   validates :job_title,     presence:   true, length: { maximum: 50 }
   validates :company,       length: { maximum: 50 }
-  validates :about,         presence:   true, length: { maximum: 1000 }
+  validates :about,         presence:   true, length: { in: 500..1000 }
   
   has_attached_file :avatar,  styles: { medium: "300x300>", thumb: "100x100>" }, 
                               default_url: "/assets/avatar.jpg"
