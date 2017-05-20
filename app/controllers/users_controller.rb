@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   
   # GET to /users
   def index
-    @user = User.all
+    @users = User.all
   end
   
   # GET to /users/:id

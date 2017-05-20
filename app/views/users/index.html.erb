@@ -1,1 +1,27 @@
-<h1><%= @user %></h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h1 class="text-center">GitConnect Community</h1><br />
+      <% @users.each do |user| %>
+        <% if user.profile %>
+        <div class="col-md-8 col-md-offset-1">
+          <%= link_to user do %>
+            <h2><%= user.profile.first_name %> <%= user.profile.last_name %></h2>
+          <% end %>
+          <h4><%= user.profile.job_title %></h4>
+          <h4><%= user.profile.company %></h4>
+        </div>
+        <div class="col-md-3">
+          <%= link_to user do %>
+            <% if user.profile.avatar %>
+              <%= image_tag user.profile.avatar.url, class: "index-avatar" %><br/>
+            <% else %>
+              <%= image_tag('avatar-blank.jpg', class: "index-avatar") %>
+            <% end %>
+          <% end %>
+        </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

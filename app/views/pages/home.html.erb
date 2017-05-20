@@ -18,7 +18,7 @@
           <%= link_to 'View Profile', user_path(current_user.id), 
                              class: "btn btn-default btn-lg btn-block signup" %>
           <% else %>
-          <%= link_to "Create Profile", new_user_profile_path(:user_id),
+          <%= link_to "Create Profile", new_user_profile_path(current_user.id),
                              class: "btn btn-primary btn-lg btn-block signup" %><br />
           <% end %>
         </div>
